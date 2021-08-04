@@ -1,0 +1,66 @@
+Jugador >>> ('127.0.0.1', 56822)
+Puntaje >>> 91.1001238822937
+Topic >>> Capitales del mundo
+Numero palabras >>> 10
+Fecha >>> 2021-03-25 19:57:50.796393
+
+Jugador >>> ('127.0.0.1', 56848)
+Puntaje >>> 124.77649331092834
+Topic >>> Tecnologia
+Numero palabras >>> 6
+Fecha >>> 2021-03-25 20:03:17.365055
+
+Jugador >>> ('127.0.0.1', 56864)
+Puntaje >>> 95.60249471664429
+Topic >>> Capitales del mundo
+Numero palabras >>> 7
+Fecha >>> 2021-03-25 20:06:18.913276
+
+Jugador >>> ('127.0.0.1', 56877)
+Puntaje >>> 122.25398445129395
+Topic >>> Animales
+Numero palabras >>> 7
+Fecha >>> 2021-03-25 20:11:38.370051
+
+Jugador >>> ('127.0.0.1', 51097)
+Puntaje >>> 143.8207037448883
+Topic >>> Animales
+Numero palabras >>> 9
+Fecha >>> 2021-03-26 08:43:44.137816
+
+Jugador >>> ('127.0.0.1', 64929)
+Puntaje >>>  
+Topic >>> Capitales del mundo
+Numero palabras >>> 12
+Fecha >>> 2021-06-10 21:03:31.085097
+
+Jugador >>> ('127.0.0.1', 59481)
+Puntaje >>>  
+Topic >>> Capitales del mundo
+Numero palabras >>> 6
+Fecha >>> 2021-06-10 21:05:32.815443
+
+Jugador >>> ('127.0.0.1', 59482)
+Puntaje >>>  
+Topic >>> Tecnologia
+Numero palabras >>> 5
+Fecha >>> 2021-06-10 21:05:42.870909
+
+Jugador >>> ('127.0.0.1', 62143)
+Puntaje >>>  
+Topic >>> Animales
+Numero palabras >>> 6
+Fecha >>> 2021-06-11 08:44:06.370619
+
+Jugador >>> ('127.0.0.1', 62144)
+Puntaje >>>  
+Topic >>> Capitales del mundo
+Numero palabras >>> 9
+Fecha >>> 2021-06-11 08:44:17.730069
+
+Jugador >>> ('127.0.0.1', 62145)
+Puntaje >>>  
+Topic >>> Animales
+Numero palabras >>> 8
+Fecha >>> 2021-06-11 08:44:33.140319
+

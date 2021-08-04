@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>HACKER PRO WEBPAGE</title>
+</head>
+<body>
+    <div class="img">
+        <img src="redes.jpg">
+    </div>
+    <div class="form">
+        <form action="http://localhost:8000" method="GET" id="get">
+            <div class="row">
+                <input type="text" id="get-name" name="Nombre" required>
+                <label for="get-name">NOMBRE</label>
+            </div>
+            <div class="row">
+                <input type="text" id="get-apaterno" name="ApellidoPaterno" required>
+                <label for="get-apaterno">APELLIDO PATERNO</label>
+            </div>
+            <div class="row">
+                <input type="text" id="get-amaterno" name="ApellidoMaterno" required>
+                <label for="get-amaterno">APELLIDO MATERNO</label>
+            </div>
+            <input type="submit" value="Enviar GET">
+        </form>
+
+        <form action="http://localhost:8000/post" method="POST" id="post">
+            <div class="row">
+                <input type="text" id="post-name" name="Nombre" required>
+                <label for="post-name">NOMBRE</label>
+            </div>
+            <div class="row">
+                <input type="text" id="post-apaterno" name="ApellidoPaterno" required>
+                <label for="post-apaterno">APELLIDO PATERNO</label>
+            </div>
+            <div class="row">
+                <input type="text" id="post-amaterno" name="ApellidoMaterno" required>
+                <label for="post-amaterno">APELLIDO MATERNO</label>
+            </div>
+            <input type="submit" value="Enviar POST">
+        </form>
+    </div>
+</body>
+</html>

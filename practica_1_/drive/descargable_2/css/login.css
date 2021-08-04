@@ -1,0 +1,459 @@
+:root {
+    --input-color: #434a59;
+    --input-focus: #045DE9;
+    --label: #09C6F9;
+    --bg: #2B303B;
+    --text: #bbb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Titillium-Regular;
+    src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+    font-family: Titillium-Light;
+    src: url(../fonts/TitilliumWeb-Light.ttf);
+}
+@font-face {
+    font-family: Titillium-Extra;
+    src: url(../fonts/TitilliumWeb-ExtraLight.ttf);
+}
+@font-face {
+    font-family: Titillium-Bold;
+    src: url(../fonts/TitilliumWeb-Bold.ttf);
+}
+
+body {
+    background: var(--bg);
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%,-50%);
+}
+.landscape {
+    display: none;
+}
+.media-img {
+    display: none;
+}
+
+.content .left {
+    width: 45%;
+    position: relative;
+}
+.content .square {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    padding: 2vw;
+    max-width: 30vh;
+    height: 30vh;
+    max-height: 30vh;
+    position: relative;
+    border-radius: 2vw;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background: var(--bg);
+    box-shadow: inset -10px -10px 30px rgba(37, 41, 50, 0.9), 
+                inset 10px 10px 20px rgba(49,55,68,1), 
+                20px 20px 30px rgba(37,41,50,0.7),
+                -20px -20px 30px rgba(49,55,68,0.8),
+                inset 0px 0px 10px rgba(49,55,68,1),
+                inset -10px -10px 10px rgba(37, 41, 50, 1);
+}
+.content .square p {
+    font-family: Titillium-Extra;
+    color: var(--text);
+    font-size: 2vw;
+    letter-spacing: 0.15vw;
+    line-height: 2.2vw;
+}
+.content .square p span {
+    font-family: Titillium-Extra;
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content .right {
+    width: 55%;
+    position: relative;
+}
+
+form#form-login {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+form#form-login button {
+    background: transparent;
+    border: none;
+    border: 1px solid transparent;
+    border-radius: 0.5vw;
+    display: block;
+    margin: auto;
+    width: 70%;
+    padding: 1.6vh 0;
+    color: var(--text);
+    font-family: Titillium-Regular;
+    text-transform: uppercase;
+    font-size: 0.75vw;
+    transition: all 299ms ease-in;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid var(--input-color);
+}
+form#form-login button:hover {
+    background: #313641;
+}
+
+.message-login {
+    font-family: Titillium-Regular;
+    text-align: center;
+    letter-spacing: 0.3vw;
+    text-transform: uppercase;
+    font-size: 0.7vw;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: -3.5vh;
+    margin-bottom: 1vh;
+    position: absolute;
+    color: #FF6550;
+    opacity: 0.5;
+}
+
+.input-group {
+    position: relative;
+    margin: 4.5vh auto;
+}
+.form-control {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 1vh;
+    font-size: 0.95vw;
+    border: none;
+    padding: 1.5vh 0 2.5vh 0;
+    border-bottom: 1px solid var(--input-color);
+    background-color: transparent;
+    font-family: Titillium-Light;
+    letter-spacing: 0.15vw;
+    color: #ccc;
+}
+.form-control + label {
+    position: absolute;
+    top: 0.5vh;
+    left: 0.1vw;
+    font-size: 0.8vw;
+    color: var(--input-color);
+    font-family: Titillium-Regular;
+    text-transform: uppercase;
+    transition: all .2s ease-out;
+    letter-spacing: 0.3vw;
+    background: transparent;
+}
+.form-control:focus {
+    outline: none;
+    border-width: 1px;
+    border-color: var(--label);
+    transition: all .2s ease-out;
+}
+.form-control:focus + label,
+.form-control.has-value + label {
+    top: -1.8vh;
+    color: var(--input-focus);
+    font-size: 0.75vw;
+}
+.form-control.has-value:not(:focus) + label {
+    color: var(--label);
+}
+
+.credits {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vw;
+    padding: 1vh 1vw 1vh 0vh;
+    border-right: 1px solid var(--input-color);
+    text-align: right;
+}
+.credits p {
+    font-family: Titillium-Regular;
+    color: var(--input-color);
+    font-size: 0.85vw;
+}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+.media-img {
+    display: flex;
+    position: absolute;
+    top: 5vh;
+    right: 7vw;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 12vh;
+    height: 12vh;
+    max-height: 12vh;
+    border-radius: 2vw;
+    transition: all 0.3s ease;
+    background: var(--bg);
+    box-shadow: inset -7px -7px 20px rgba(37, 41, 50, 1), 
+                inset 7px 7px 20px rgba(49,55,68,1), 
+                10px 10px 20px rgba(37,41,50,1),
+                -10px -10px 20px rgba(49,55,68,1),
+                inset 7px 7px 10px rgba(49,55,68,1),
+                inset -7px -7px 10px rgba(37, 41, 50, 1);
+}
+.media-img img {
+    width: 50%;
+    position: absolute;
+}
+.content {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%,-50%);
+}
+.content .left {
+    display: none;
+}
+.content .right {
+    width: 100%;
+    position: relative;
+}
+
+form#form-login {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+form#form-login button {
+    border-radius: 1vw;
+    width: 100%;
+    font-size: 1.75vw;
+}
+
+.message-login {
+    letter-spacing: 0.3vw;
+    font-size: 1.5vw;
+    text-align: right;
+}
+
+.input-group {
+    position: relative;
+    margin: 4.5vh auto;
+}
+.form-control {
+    font-size: 2.5vw;
+    letter-spacing: 0.4vw;
+}
+.form-control + label {
+    font-size: 2vw;
+    letter-spacing: 0.75vw;
+}
+.form-control:focus + label,
+.form-control.has-value + label {
+    font-size: 1.75vw;
+}
+      
+.credits {
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 1vh 1vw 1vh 0vh;
+    border: none;
+}
+.credits p {
+    font-family: Titillium-Regular;
+    color: var(--input-color);
+    font-size: 1.75vw;
+}
+}
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+.content {
+    display: none;
+}
+.landscape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+}
+.landscape h1 {
+    font-family: Titillium-Regular;
+    font-size: 2vw;
+    font-weight: normal;
+    color: #999;
+    padding: 2vh 2vw 2vh 0;
+    border-right: 1px solid blue;
+}
+.landscape p {
+    font-family: Titillium-Light;
+    color: #444;
+    padding-left: 2vw;
+    font-size: 2vw;
+}
+.credits {
+    display: none;
+}
+}
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+.content {
+    display: none;
+}
+.landscape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+}
+.landscape h1 {
+    font-family: Titillium-Regular;
+    font-size: 2vw;
+    font-weight: normal;
+    color: #999;
+    padding: 2vh 2vw 2vh 0;
+    border-right: 1px solid blue;
+}
+.landscape p {
+    font-family: Titillium-Light;
+    color: #444;
+    padding-left: 2vw;
+    font-size: 2vw;
+}
+.credits {
+    display: none;
+}
+}
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+.media-img {
+    display: flex;
+    position: absolute;
+    top: 5vh;
+    right: 11vw;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 10vh;
+    height: 10vh;
+    max-height: 10vh;
+    border-radius: 2vw;
+    transition: all 0.3s ease;
+    background: var(--bg);
+    box-shadow: inset -7px -7px 20px rgba(37, 41, 50, 1), 
+                inset 7px 7px 20px rgba(49,55,68,1), 
+                10px 10px 20px rgba(37,41,50,1),
+                -10px -10px 20px rgba(49,55,68,1),
+                inset 7px 7px 10px rgba(49,55,68,1),
+                inset -7px -7px 10px rgba(37, 41, 50, 1);
+}
+.media-img img {
+    width: 55%;
+    position: absolute;
+}
+.content {
+    width: 75%;
+}
+.content .left {
+    display: none;
+}
+.content .right {
+    width: 100%;
+    position: relative;
+}
+
+form#form-login {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+form#form-login button {
+    border-radius: 1.5vw;
+    width: 100%;
+    font-size: 2.5vw;
+    margin-top: 7vh;
+}
+
+.message-login {
+    letter-spacing: 0.5vw;
+    font-size: 2.25vw;
+    text-align: right;
+}
+
+.input-group {
+    position: relative;
+    margin: 4.5vh auto;
+}
+.form-control {
+    font-size: 3.5vw;
+    letter-spacing: 0.5vw;
+}
+.form-control + label {
+    font-size: 3vw;
+    letter-spacing: 1vw;
+}
+.form-control:focus + label,
+.form-control.has-value + label {
+    font-size: 2.25vw;
+}
+      
+.credits {
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 1vh 1vw 1vh 0vh;
+    border: none;
+}
+.credits p {
+    font-family: Titillium-Regular;
+    color: var(--input-color);
+    font-size: 3vw;
+}
+}
